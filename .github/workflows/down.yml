@@ -1,4 +1,4 @@
-name: Win11ISO
+name: ISO
 
 on:
   workflow_dispatch:
