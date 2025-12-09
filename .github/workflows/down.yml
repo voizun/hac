@@ -1,0 +1,17 @@
+name: Win11ISO
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ISO:
+    permissions:
+      contents: write
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        env:
+          GH_TOKEN: ${{ github.token }}
